@@ -568,7 +568,7 @@
       "secret": "**********",
       "redirectUris": [
         "http://localhost:4250/*",
-        "http://localhost:8081/*"
+        "http://localhost:8085/*"
       ],
       "webOrigins": [
         "+"
@@ -601,23 +601,25 @@
       "authenticationFlowBindingOverrides": {},
       "fullScopeAllowed": true,
       "nodeReRegistrationTimeout": -1,
-      "protocolMappers" : [ {
-        "id" : "812be040-681f-40d7-aaf3-5c21c4650186",
-        "name" : "client roles",
-        "protocol" : "openid-connect",
-        "protocolMapper" : "oidc-usermodel-client-role-mapper",
-        "consentRequired" : false,
-        "config" : {
-          "multivalued" : "true",
-          "userinfo.token.claim" : "true",
-          "user.attribute" : "foo",
-          "id.token.claim" : "true",
-          "access.token.claim" : "true",
-          "claim.name" : "roles",
-          "jsonType.label" : "String",
-          "usermodel.clientRoleMapping.clientId" : "issuer-admin"
+      "protocolMappers": [
+        {
+          "id": "812be040-681f-40d7-aaf3-5c21c4650186",
+          "name": "client roles",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-client-role-mapper",
+          "consentRequired": false,
+          "config": {
+            "multivalued": "true",
+            "userinfo.token.claim": "true",
+            "user.attribute": "foo",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "roles",
+            "jsonType.label": "String",
+            "usermodel.clientRoleMapping.clientId": "issuer-admin"
+          }
         }
-      } ],
+      ],
       "defaultClientScopes": [
         "web-origins",
         "role_list",

@@ -1,6 +1,6 @@
 [
   {
-    "id": "85459GxjNySJ8HwTTQ4vq7:2:verified_person:1.4.0"
+    "id": "GXK1Ubc58DvZDe48zPYdcf:2:verified_person:0.1.0"
   },
   {
     "schema_name": "verified_person",
@@ -17,7 +17,7 @@
       "given_names"
     ],
     "default": true,
-    "revocable": true,
+    "revocable": false,
     "tag": "issuer-kit-demo",
     "public": false
   }

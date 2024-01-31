@@ -59,7 +59,7 @@ Once started, the services will be exposed on localhost at the following endpoin
 
 - `api`: http://localhost:5050
 
-- `issuer-admin` Administrator app: http://localhost:8081
+- `issuer-admin` Administrator app: http://localhost:8085
 
 - `issuer-web` Issuer app: http://localhost:8082
 
@@ -103,7 +103,7 @@ Once started, the services will be exposed on localhost at the following endpoin
 
 - `api`: http://localhost:5050
 
-- `issuer-admin` Administrator app: http://localhost:8081
+- `issuer-admin` Administrator app: http://localhost:8085
 
 - `issuer-web` Issuer app: http://localhost:8082
 

@@ -229,7 +229,7 @@ configureEnvironment() {
   # issuer-admin
   export ISSUER_ADMIN_PORT=4250
   export ADMIN_WEB_HOST_NAME=http://localhost
-  export ADMIN_WEB_HOST_PORT=8081
+  export ADMIN_WEB_HOST_PORT=8085
   export ADMIN_WEB_HOST_TLS=off
   export ADMIN_API_HOST=api
   export ADMIN_API_PORT=5050
@@ -455,7 +455,7 @@ case "${COMMAND}" in
 
     unset DEV_MODE
     unset AGENT_WEBHOOK_URL
-    export LEDGER_URL="http://test.bcovrin.vonx.io"
+    export LEDGER_URL="https://browser.cloudapi.dev.didxtech.com"
     export TAILS_SERVER_URL="https://tails-dev.vonx.io"
     if [[ ! -f ".env" ]]; then
       ACAPY_WALLET_SEED=$(generateSeed issuer-kit-demo)
