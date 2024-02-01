@@ -54,6 +54,23 @@ export class SchemaUtils {
     }
   }
 
+  async signTAA(): Promise<boolean> {
+    logger.debug(`Signing TAA`);
+    const url = `${this.utils.getAdminUrl()}/ledger/taa/accept`;
+    const response = await Axios.post(
+      url,
+      {
+        mechanism: "service_agreement",
+        text: "This is a sample Transaction Authors Agreement **(TAA)**, for the VON test Network.\n\nOn public ledger systems this will typically contain legal constraints that must be accepted before any write operations will be permitted.",
+        version: "1.1"
+      },
+      this.utils.getRequestConfig()
+    );
+    console.log("SERVICE AGREEEMENT RESPONSE")
+    console.log(response.data)
+    return response.status === 200;
+  }
+
   async publishSchema(schema: SchemaDefinition): Promise<AriesSchema> {
     const url = `${this.utils.getAdminUrl()}/schemas`;
     logger.debug(`Publishing schema to ledger: ${JSON.stringify(schema)}`);

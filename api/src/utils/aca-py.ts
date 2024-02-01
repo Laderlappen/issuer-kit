@@ -55,8 +55,15 @@ export class AcaPyUtils {
       logger.debug("Agent not ready, retrying in 500ms...");
       await sleep(500);
     }
+    // Accept TAA
 
+    try {
+      await schemaUtils.signTAA();
+    } catch (err) {
+      logger.error("Error accepting TAA: " + err);
+    }
     // init schemas and cred_defs
+
     for (let schemaDef of config) {
       try {
         logger.debug(
@@ -86,7 +93,7 @@ export class AcaPyUtils {
             logger.debug(
               `Schema found on ledger: ${JSON.stringify(schemaDef)}`
             );
-          }else{
+          } else {
             // Register to the ledger if no results found
             schema = await schemaUtils.publishSchema(schemaDef);
           }
